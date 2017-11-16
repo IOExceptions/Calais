@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >  
+<generatorConfiguration>  
+ <!-- 驱动的绝对路径 -->
+<classPathEntry location="E:\mysql-connector-java-5.1.18-bin.jar" />  
+<context id="context1" targetRuntime="MyBatis3">  
+			<!-- TKmybatis配置 -->
+	        <property name="javaFileEncoding" value="UTF-8"/>
+	        <property name="beginningDelimiter" value="`"/>
+	        <property name="endingDelimiter" value="`"/>
+	        <!-- 这里引入扩展插件 -->   
+            <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"></plugin>  
+            <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin> 
+            <plugin type="org.mybatis.generator.plugins.ToStringPlugin"></plugin> 
+	        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+	           <!-- <property  name="mappers" name="tk.mybatis.mapper.common.Mapper"/> -->
+	           <property name="mappers" value="com.calaisweb.framework.base.mapper.MyMapper"/>
+	           
+	        </plugin>
+        
+        		
+            <commentGenerator>  
+                <property name="suppressAllComments" value="true" /><!-- 是否取消注释 -->  
+                <property name="suppressDate" value="false" /> <!-- 是否生成注释代时间戳 -->  
+            </commentGenerator>  
+            <jdbcConnection driverClass="com.mysql.jdbc.Driver"  
+                connectionURL="jdbc:mysql://localhost:3306/jialaaishidb" userId="root"  
+                password="123456" />  
+          
+            <!-- targetPackage是目标包名,  targetProject是包所在的位置-->  
+            <!-- javaModelGenerator生成的是实体类,  sqlMapGenerator生成的是映射文件,  javaClientGenerator生成的是dao -->  
+            <javaModelGenerator targetPackage="com.calaisweb.calaisweb.website.entity"  
+                targetProject="src\main\java\" />  
+            <sqlMapGenerator targetPackage="com.calaisweb.calaisweb.website.dao"  
+                targetProject="src\main\java\" />  
+            <javaClientGenerator targetPackage="com.calaisweb.calaisweb.website.dao"  
+                targetProject="src\main\java\" type="XMLMAPPER" />  
+                  
+                  
+                  
+            <!-- domainObjectName是表对应的实体类名,  tableName是对应的表名-->  
+            <!-- table可以配置多个,enable*几个参数是为了自动生成一些额外的sql操作,可以关闭-->  
+             <table  tableName="Jld_website_message"  
+                enableCountByExample="false" enableUpdateByExample="false"  
+                enableDeleteByExample="false" enableSelectByExample="false"  
+                selectByExampleQueryId="false">  
+            </table>  
+            <table tableName="Jld_website_navigation"  
+                enableCountByExample="false" enableUpdateByExample="false"  
+                enableDeleteByExample="false" enableSelectByExample="false"  
+                selectByExampleQueryId="false">  
+            </table>
+            <table tableName="Jls_website_admin"  
+                enableCountByExample="false" enableUpdateByExample="false"  
+                enableDeleteByExample="false" enableSelectByExample="false"  
+                selectByExampleQueryId="false">  
+            </table> 
+            <table tableName="Jls_website_case"  
+                enableCountByExample="false" enableUpdateByExample="false"  
+                enableDeleteByExample="false" enableSelectByExample="false"  
+                selectByExampleQueryId="false">  
+            </table> 
+            <table tableName="Jls_website_contact"  
+                enableCountByExample="false" enableUpdateByExample="false"  
+                enableDeleteByExample="false" enableSelectByExample="false"  
+                selectByExampleQueryId="false">  
+            </table> 
+            <table tableName="Jls_website_feature"  
+                enableCountByExample="false" enableUpdateByExample="false"  
+                enableDeleteByExample="false" enableSelectByExample="false"  
+                selectByExampleQueryId="false">  
+            </table> 
+            <table tableName="Jls_website_news"  
+                enableCountByExample="false" enableUpdateByExample="false"  
+                enableDeleteByExample="false" enableSelectByExample="false"  
+                selectByExampleQueryId="false">  
+            </table> 
+            <table tableName="Jls_website_newstype"  
+                enableCountByExample="false" enableUpdateByExample="false"  
+                enableDeleteByExample="false" enableSelectByExample="false"  
+                selectByExampleQueryId="false">  
+            </table> 
+            <table tableName="Jls_website_primary"  
+                enableCountByExample="false" enableUpdateByExample="false"  
+                enableDeleteByExample="false" enableSelectByExample="false"  
+                selectByExampleQueryId="false">  
+            </table> 
+            <table tableName="Jls_website_programme"  
+                enableCountByExample="false" enableUpdateByExample="false"  
+                enableDeleteByExample="false" enableSelectByExample="false"  
+                selectByExampleQueryId="false">  
+            </table>
+            <table tableName="Jls_website_slideshow"  
+                enableCountByExample="false" enableUpdateByExample="false"  
+                enableDeleteByExample="false" enableSelectByExample="false"  
+                selectByExampleQueryId="false">  
+            </table>
+            <table tableName="jld_website_demeanourtype"  
+                enableCountByExample="false" enableUpdateByExample="false"  
+                enableDeleteByExample="false" enableSelectByExample="false"  
+                selectByExampleQueryId="false">  
+            </table> 
+            <table tableName="jld_website_demeanour"  
+                enableCountByExample="false" enableUpdateByExample="false"  
+                enableDeleteByExample="false" enableSelectByExample="false"  
+                selectByExampleQueryId="false">  
+            </table>  
+            <table tableName="jls_website_order"  
+                enableCountByExample="false" enableUpdateByExample="false"  
+                enableDeleteByExample="false" enableSelectByExample="false"  
+                selectByExampleQueryId="false">  
+            </table> 
+                         
+        </context>  
+</generatorConfiguration>  

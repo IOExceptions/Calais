@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.calaisweb.calaisweb.website.dao.extend.NewsMapper" >
+	<resultMap id="BaseResultMap" type="com.calaisweb.calaisweb.website.entity.JlsWebsiteNews" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="fence_" property="fence" jdbcType="VARCHAR" />
+    <result column="title_" property="title" jdbcType="VARCHAR" />
+    <result column="picture_" property="picture" jdbcType="VARCHAR" />
+    <result column="editor_" property="editor" jdbcType="VARCHAR" />
+    <result column="createtime_" property="createtime" jdbcType="VARCHAR" />
+    <result column="order_" property="order" jdbcType="INTEGER" />
+    <result column="num_" property="num" jdbcType="INTEGER" />
+    <result column="news_type_" property="newsType" jdbcType="VARCHAR" />
+    <result column="main_show_" property="mainShow" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id, fence_, title_, picture_, editor_, createtime_, order_, num_, news_type_, main_show_
+  </sql>
+  
+  <select id="getlastNews" resultMap="BaseResultMap"  parameterType="java.lang.String">
+  		<!-- &lt;  是   < -->
+     	SELECT 
+		<include refid="Base_Column_List"></include>
+		 FROM jls_website_news WHERE createtime_ &lt;   '${createtime_}' AND news_type_=${newsType}  ORDER BY createtime_ DESC LIMIT 1  
+  </select>
+ 		<!-- &gt;  是   > -->
+  <select id="getnextNews" resultMap="BaseResultMap"  parameterType="java.lang.String">
+  		SELECT 
+		<include refid="Base_Column_List"></include>
+		 FROM jls_website_news WHERE createtime_ &gt;   '${createtime_}' AND news_type_=${newsType} ORDER BY createtime_ ASC LIMIT 1 
+  </select>
+</mapper>

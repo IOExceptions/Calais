@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.calaisweb.calaisweb.website.dao.JlsWebsitePrimaryMapper" >
+  <resultMap id="BaseResultMap" type="com.calaisweb.calaisweb.website.entity.JlsWebsitePrimary" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id_" property="id" jdbcType="VARCHAR" />
+    <result column="name_" property="name" jdbcType="VARCHAR" />
+    <result column="weixin_" property="weixin" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.calaisweb.calaisweb.website.entity.JlsWebsitePrimary" extends="BaseResultMap" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="content_" property="content" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id_, name_, weixin_
+  </sql>
+  <sql id="Blob_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    content_
+  </sql>
+</mapper>

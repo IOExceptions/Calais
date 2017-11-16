@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <title>轮播图片</title>
+
+
+    <link rel="stylesheet" href="css/banner.css"/>
+
+</head>
+<body>
+
+<div id="banner-tab" class="flexslider">
+    <div class="slideBox">
+        <ul class="slides">
+            <li><img width="960" height="540" src="img/bleck.jpg"></li>
+            <li><img width="960" height="540" src="img/fute.jpg"></li>
+            <li><img width="960" height="540" src="img/yema.jpg"></li>
+            <li><img width="960" height="540" src="img/white.jpg"></li>
+        </ul>
+    </div>
+
+    <ul class="flex-direction-nav">
+        <li disabled="true" class="prev"><</li>
+        <li class="next">></li>
+    </ul>
+    <ol id="bannerCtrl">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ol>
+</div>
+
+
+<script src="http://www.jq22.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/banner.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var bannerSlide = new slide($("#banner-tab"), {
+            time: 4000,
+            event: "hover",
+            auto: true,
+            controller: $('#bannerCtrl')
+        });
+
+        $(".prev").click(function () {
+            bannerSlide.prev();
+        });
+
+        $(".next").click(function () {
+            bannerSlide.next();
+        })
+
+    })
+</script>
+
+
+</body>
+</html>

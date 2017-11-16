@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.calaisweb.calaisweb.website.dao.JlsWebsiteNewstypeMapper" >
+  <resultMap id="BaseResultMap" type="com.calaisweb.calaisweb.website.entity.JlsWebsiteNewstype" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id_" property="id" jdbcType="VARCHAR" />
+    <result column="typename_" property="typename" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id_, typename_
+  </sql>
+</mapper>

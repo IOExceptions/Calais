@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.calaisweb.calaisweb.website.dao.JldWebsiteMessageMapper" >
+  <resultMap id="BaseResultMap" type="com.calaisweb.calaisweb.website.entity.JldWebsiteMessage" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id_" property="id" jdbcType="VARCHAR" />
+    <result column="name_" property="name" jdbcType="VARCHAR" />
+    <result column="phone_" property="phone" jdbcType="VARCHAR" />
+    <result column="content_" property="content" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.calaisweb.calaisweb.website.entity.JldWebsiteMessage" extends="BaseResultMap" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="email_" property="email" jdbcType="VARBINARY" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id_, name_, phone_, content_
+  </sql>
+  <sql id="Blob_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    email_
+  </sql>
+</mapper>

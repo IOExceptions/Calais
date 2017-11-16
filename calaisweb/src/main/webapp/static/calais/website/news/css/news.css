@@ -1,0 +1,33 @@
+.contenttext{
+}
+.contenttext .day{
+	cursor: pointer;
+	text-align: center;
+	color: #6607a3;
+	font-family: "Arial";
+	font-size: 25px;
+	font-weight: 600;
+}
+.contenttext .year{
+	cursor: pointer;
+	text-align: center;
+	color: #6607a3;
+	font-family: "Arial";
+	font-size: 15px;
+}
+.newsul{
+	width: auto;
+	margin-left: 40px;
+}
+.newsList{
+	border-bottom: 1px dashed  #CCCCCC;
+}
+.newsList:hover{
+	cursor:pointer
+}
+.paging{
+	
+}
+.paging ul{
+	float: left;
+}

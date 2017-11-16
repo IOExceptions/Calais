@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.calaisweb.calaisweb.website.dao.JlsWebsiteOrderMapper" >
+  <resultMap id="BaseResultMap" type="com.calaisweb.calaisweb.website.entity.JlsWebsiteOrder" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id_" property="id" jdbcType="VARCHAR" />
+    <result column="name_" property="name" jdbcType="VARCHAR" />
+    <result column="phone_" property="phone" jdbcType="VARCHAR" />
+    <result column="cargo_type_" property="cargoType" jdbcType="VARCHAR" />
+    <result column="carriage_" property="carriage" jdbcType="VARCHAR" />
+    <result column="weight_" property="weight" jdbcType="VARCHAR" />
+    <result column="state_" property="state" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id_, name_, phone_, cargo_type_, carriage_, weight_, state_
+  </sql>
+</mapper>

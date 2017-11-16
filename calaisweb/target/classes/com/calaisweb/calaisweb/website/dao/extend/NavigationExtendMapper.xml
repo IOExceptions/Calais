@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.calaisweb.calaisweb.website.dao.extend.NavigationExtendMapper" >
+  <resultMap id="BaseResultMap" type="com.calaisweb.calaisweb.website.entity.extend.NavigationExtend" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id_" property="id" jdbcType="INTEGER" />
+    <result column="en_" property="en" jdbcType="VARCHAR" />
+    <result column="text_" property="text" jdbcType="VARCHAR" />
+    <result column="url_" property="url" jdbcType="VARCHAR" />
+    <result column="parent_id_" property="parentId" jdbcType="VARCHAR" />
+    
+  </resultMap>
+  
+  <select id="selectAll" resultMap="BaseResultMap">
+  	   select *
+  	   from jld_website_navigation
+  </select>
+  
+</mapper>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.calaisweb.calaisweb.website.dao.JlsWebsiteContactMapper" >
+  <resultMap id="BaseResultMap" type="com.calaisweb.calaisweb.website.entity.JlsWebsiteContact" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id_" property="id" jdbcType="VARCHAR" />
+    <result column="address_" property="address" jdbcType="VARCHAR" />
+    <result column="special_plane_" property="specialPlane" jdbcType="VARCHAR" />
+    <result column="fax_" property="fax" jdbcType="VARCHAR" />
+    <result column="jingwei_" property="jingwei" jdbcType="VARCHAR" />
+    <result column="name_" property="name" jdbcType="VARCHAR" />
+    <result column="postcode_" property="postcode" jdbcType="VARCHAR" />
+    <result column="overhead_" property="overhead" jdbcType="INTEGER" />
+    <result column="emaile_" property="emaile" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.calaisweb.calaisweb.website.entity.JlsWebsiteContact" extends="BaseResultMap" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="content_" property="content" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id_, address_, special_plane_, fax_, jingwei_, name_, postcode_, overhead_, emaile_
+  </sql>
+  <sql id="Blob_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    content_
+  </sql>
+</mapper>

@@ -1,0 +1,24 @@
+.case_title .title{
+	width: 290px;
+font-size: 16px;
+line-height: 50px;
+color: #333;
+display: block;
+margin: 0 auto;
+}
+.case_title .content a{
+	width: 290px;
+font-size: 13px;
+line-height: 22px;
+color: #999;
+margin: 0 auto;
+display: block;
+}
+
+.case_title .content a:hover{
+	font-size: 13px;
+	color: #36025B;
+}
+.case_title{
+	border-bottom: 1px dashed  #CCCCCC;
+}
